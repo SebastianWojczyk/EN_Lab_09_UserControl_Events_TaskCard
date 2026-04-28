@@ -60,6 +60,7 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
             this.checkBoxDone.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDone.TabIndex = 3;
             this.checkBoxDone.UseVisualStyleBackColor = true;
+            this.checkBoxDone.CheckedChanged += new System.EventHandler(this.checkBoxDone_CheckedChanged);
             // 
             // buttonBackColor
             // 

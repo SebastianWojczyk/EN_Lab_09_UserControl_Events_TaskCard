@@ -12,8 +12,19 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
 {
     public partial class UserControlTaskCard : UserControl
     {
-        //new event for removing - void finctionName(UserControlTaskCard sender)
+        public bool TaskDone
+        {
+            get
+            {
+                return checkBoxDone.Checked;
+            }
+        }
+
+        //new event for removing - void functionName(UserControlTaskCard sender)
         public event Action<UserControlTaskCard> TaskCardRemoving;
+
+        //new event for Change ToDo/Done - void functionName()
+        public event Action DoneChanged;
 
         public UserControlTaskCard()
         {
@@ -21,6 +32,7 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
 
             textBoxTitle.Text = "New task";
             checkBoxDone.Checked = false;
+            checkBoxDone_CheckedChanged(null, null);
             this.BackColor = Color.White;
         }
 
@@ -39,9 +51,26 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             //check event ("pointer") is null
-            if(TaskCardRemoving != null)
+            if (TaskCardRemoving != null)
             {
                 TaskCardRemoving(this);
+            }
+        }
+
+        private void checkBoxDone_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDone.Checked)
+            {
+                checkBoxDone.Text = "Done";
+            }
+            else
+            {
+                checkBoxDone.Text = "ToDo";
+            }
+
+            if (DoneChanged != null)
+            {
+                DoneChanged();
             }
         }
     }

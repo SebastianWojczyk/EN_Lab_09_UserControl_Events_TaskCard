@@ -78,7 +78,7 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
             this.Controls.Add(this.labelSummary);
             this.Controls.Add(this.buttonCreate);
             this.Name = "Form1";
-            this.Text = "1";
+            this.Text = "Task list";
             this.ResumeLayout(false);
             this.PerformLayout();
 
