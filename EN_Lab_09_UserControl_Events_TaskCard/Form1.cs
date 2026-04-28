@@ -22,8 +22,8 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
             UserControlTaskCard newTaskCard = new UserControlTaskCard();
 
             //connect method NewTaskCard_TaskCardRemoving to event ("pointer")
-            newTaskCard.TaskCardRemoving += NewTaskCard_TaskCardRemoving            newTaskCard.TaskCardRemoving += NewTaskCard_TaskCardRemoving;
-
+            newTaskCard.TaskCardRemoving += NewTaskCard_TaskCardRemoving;
+            
             flowLayoutPanelTaskList.Controls.Add(newTaskCard);
         }
 
