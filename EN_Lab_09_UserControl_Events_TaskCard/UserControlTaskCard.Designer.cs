@@ -68,6 +68,7 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
             this.buttonBackColor.TabIndex = 4;
             this.buttonBackColor.Text = "Color";
             this.buttonBackColor.UseVisualStyleBackColor = true;
+            this.buttonBackColor.Click += new System.EventHandler(this.buttonBackColor_Click);
             // 
             // UserControlTaskCard
             // 

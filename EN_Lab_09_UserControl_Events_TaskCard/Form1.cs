@@ -16,5 +16,12 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
         {
             InitializeComponent();
         }
+
+        private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            UserControlTaskCard newTaskCard = new UserControlTaskCard();
+
+            flowLayoutPanelTaskList.Controls.Add(newTaskCard);
+        }
     }
 }

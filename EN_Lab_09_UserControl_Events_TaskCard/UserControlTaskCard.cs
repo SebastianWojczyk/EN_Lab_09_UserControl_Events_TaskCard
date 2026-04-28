@@ -15,7 +15,22 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
         public UserControlTaskCard()
         {
             InitializeComponent();
+
+            textBoxTitle.Text = "New task";
+            checkBoxDone.Checked = false;
+            this.BackColor = Color.White;
         }
 
+        private void buttonBackColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+
+            colorDialog.Color = this.BackColor;
+
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.BackColor = colorDialog.Color;
+            }
+        }
     }
 }

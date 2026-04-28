@@ -42,12 +42,14 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
             this.buttonCreate.TabIndex = 0;
             this.buttonCreate.Text = "Create new Task";
             this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // labelSummary
             // 
+            this.labelSummary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSummary.AutoSize = true;
             this.labelSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSummary.Location = new System.Drawing.Point(517, 25);
+            this.labelSummary.Location = new System.Drawing.Point(377, 25);
             this.labelSummary.Name = "labelSummary";
             this.labelSummary.Size = new System.Drawing.Size(83, 20);
             this.labelSummary.TabIndex = 1;
@@ -56,16 +58,22 @@ namespace EN_Lab_09_UserControl_Events_TaskCard
             // 
             // flowLayoutPanelTaskList
             // 
+            this.flowLayoutPanelTaskList.AutoSize = true;
+            this.flowLayoutPanelTaskList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelTaskList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelTaskList.Location = new System.Drawing.Point(27, 55);
+            this.flowLayoutPanelTaskList.MaximumSize = new System.Drawing.Size(0, 700);
             this.flowLayoutPanelTaskList.Name = "flowLayoutPanelTaskList";
-            this.flowLayoutPanelTaskList.Size = new System.Drawing.Size(573, 328);
+            this.flowLayoutPanelTaskList.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanelTaskList.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 432);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(492, 424);
             this.Controls.Add(this.flowLayoutPanelTaskList);
             this.Controls.Add(this.labelSummary);
             this.Controls.Add(this.buttonCreate);
